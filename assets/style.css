@@ -1,7 +1,7 @@
 
- .row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col, .container{
+.row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col,.container{
     display: flex;
-    justify-content: center; /* Centers the text inside each col */
+    justify-content: baseline; /* Centers the text inside each col */
     align-items: flex-start; /* Vertically centers the text inside each col */
     width: 60px; /* You can adjust this width as needed */
     height: 60px; /* You can adjust this height as needed */
@@ -15,13 +15,14 @@
 }
 .container{
     position: relative;
-    width:800px;
-    height:1200px;
+    width:auto;
+    height:400px;
     margin:0 auto;
     padding:5px;
     display:flex;
     border-radius:10px;
     background-color: plum;
+
 }
 
 
