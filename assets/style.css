@@ -1,0 +1,27 @@
+
+ .row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col, .container{
+    display: flex;
+    justify-content: center; /* Centers the text inside each col */
+    align-items: flex-start; /* Vertically centers the text inside each col */
+    width: 60px; /* You can adjust this width as needed */
+    height: 60px; /* You can adjust this height as needed */
+    background-color: #f0f0f0; /* Light background color */
+    border: 1px solid #ddd; /* Border around each day */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Adjust font size */
+    flex-direction: column;
+   
+}
+.container{
+    position: relative;
+    width:800px;
+    height:1200px;
+    margin:0 auto;
+    padding:5px;
+    display:flex;
+    border-radius:10px;
+    background-color: plum;
+}
+
+
