@@ -1,3 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calender-header {
+  background-color: #66edf1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(201, 53, 53, 0.1);
+  gap: 30px;
+  border: 2px solid #4e6985;
+  padding: 10px 20px; 
+}
+.month-year {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
 
  .row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col, .container{
     display: flex;
