@@ -1,28 +1,71 @@
 
-.row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col,.container{
+
+
+body {
+    background-color: #f8f9fa;
     display: flex;
-    justify-content: baseline; /* Centers the text inside each col */
-    align-items: flex-start; /* Vertically centers the text inside each col */
-    width: 60px; /* You can adjust this width as needed */
-    height: 60px; /* You can adjust this height as needed */
-    background-color: #f0f0f0; /* Light background color */
-    border: 1px solid #ddd; /* Border around each day */
-    border-radius: 5px; /* Optional rounded corners */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Adjust font size */
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calender-header {
+  position:fixed;/*fixing the calendar header on top of the page*/ 
+  top:0;
+  z-index: 1000; /* making sure the header stays on top of other content */
+  background-color: #66edf1;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(201, 53, 53, 0.1);
+  gap: 30px;
+  border: 2px solid #4e6985;
+  padding: 10px 20px; 
+}
+
+.month-year {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.calendarBox{
+position:fixed;
+ width:500px;
+ background:gray;
+ border-radius:10px;
+ max-height:auto;
+ 
+}
+
+.calendar ul{
+    display:flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.calendarBox main{
+    display: flex;
+    align-items: center;
+    padding:25px 30px 10px;
+    justify-content: space-between;
+}
+.calendar li{
+    display:flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:10px;
    
 }
-.container{
-    position: relative;
-    width:auto;
-    height:400px;
-    margin:0 auto;
-    padding:5px;
-    display:flex;
-    border-radius:10px;
-    background-color: plum;
 
+.days li:hover {
+    color: #ff5733;  /* Change text color on hover */
+    font-size:28px
 }
-
-
+.calendar ul{
+    width:100%7;
+    font-size:25px;
+ }
