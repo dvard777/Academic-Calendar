@@ -69,3 +69,8 @@ position:fixed;
     width:100%7;
     font-size:25px;
  }
+ .calendar .days {
+    display: grid;  
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px;  
+}
