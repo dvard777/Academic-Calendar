@@ -1,0 +1,76 @@
+
+
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calender-header {
+  position:fixed;/*fixing the calendar header on top of the page*/ 
+  top:0;
+  z-index: 1000; /* making sure the header stays on top of other content */
+  background-color: #66edf1;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(201, 53, 53, 0.1);
+  gap: 30px;
+  border: 2px solid #4e6985;
+  padding: 10px 20px; 
+}
+
+.month-year {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.calendarBox{
+position:fixed;
+ width:500px;
+ background:gray;
+ border-radius:10px;
+ max-height:auto;
+ 
+}
+
+.calendar ul{
+    display:flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.calendarBox main{
+    display: flex;
+    align-items: center;
+    padding:25px 30px 10px;
+    justify-content: space-between;
+}
+.calendar li{
+    display:flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:10px;
+   
+}
+
+.days li:hover {
+    color: #ff5733;  /* Change text color on hover */
+    font-size:28px
+}
+.calendar ul{
+    width:100%7;
+    font-size:25px;
+ }
+ .calendar .days {
+    display: grid;  
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px;  
+}
