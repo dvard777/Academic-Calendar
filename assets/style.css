@@ -1,6 +1,62 @@
+/*
+*
+*::before,
+*::after {
 
+box-sizing: border-box;
+}
+*/
+body {
 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+    
+}
+.weekdays {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
 
+.container {
+    width: 80%;
+    height: 600px;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    text-align: space-around;
+}
+
+.box {
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    padding: 1em;
+    font-weight: 700;
+    color: black;
+    text-align: start;
+    border: .5px solid grey;
+    border-style: dotted dotted dotted dotted;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*
 body {
     background-color: #f8f9fa;
     display: flex;
@@ -8,7 +64,7 @@ body {
     align-items: center;
     height: 100vh;
 }
-
+*/
 .calender-header {
   position:fixed;/*fixing the calendar header on top of the page*/ 
   top:0;
@@ -28,7 +84,7 @@ body {
     font-weight: bold;
     font-size: 1.25rem;
 }
-
+/*
 .calendarBox{
 position:fixed;
  width:500px;
@@ -37,6 +93,7 @@ position:fixed;
  max-height:auto;
  
 }
+ */
 
 .calendar ul{
     display:flex;
