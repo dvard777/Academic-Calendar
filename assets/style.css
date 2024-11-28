@@ -1,53 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+.calender-header {
+    background-color: #d88e8e;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 6px rgba(201, 53, 53, 0.1);
+    gap: 30px;
+    border: 2px solid #77ace6;
+    padding: 10px 20px; 
+}
+
+.month-year {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Align days under weekdays */
+    grid-auto-rows: 60px; /* Consistent height for days */
+    gap: 10px; /* Spacing between boxes */
+    width: 100%;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px; /* Add spacing below the weekdays */
+    background-color: #f0f0f0; /* Optional background for better distinction */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.week {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f0f0f0; /* Light background for weekdays */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.calender-header {
-  background-color: #66edf1;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 4px 6px rgba(201, 53, 53, 0.1);
-  gap: 30px;
-  border: 2px solid #4e6985;
-  padding: 10px 20px; 
-}
-.month-year {
+    width: 100%;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 1px;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 25px;
+    color: #d88e8e;
+    font-family: 'Times New Roman', Times, serif;
 }
-
- .row, .row-cols-1 ,.row-cols-sm-2, .row-cols-md-4 .col, .container{
-    display: flex;
-    justify-content: center; /* Centers the text inside each col */
-    align-items: flex-start; /* Vertically centers the text inside each col */
-    width: 60px; /* You can adjust this width as needed */
-    height: 60px; /* You can adjust this height as needed */
-    background-color: #f0f0f0; /* Light background color */
-    border: 1px solid #ddd; /* Border around each day */
-    border-radius: 5px; /* Optional rounded corners */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Adjust font size */
-    flex-direction: column;
-   
-}
-.container{
-    position: relative;
-    width:800px;
-    height:1200px;
-    margin:0 auto;
-    padding:5px;
-    display:flex;
-    border-radius:10px;
-    background-color: plum;
-}
-
 
