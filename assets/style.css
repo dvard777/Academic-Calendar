@@ -58,12 +58,12 @@
     color: #d88e8e;
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+
 }
 .box.hovered {
-    background-color: #d88e8e; /* Highlight color */
-    color: white; /* Text color on hover */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background-color: #d88e8e;
+    color: white; 
+    box-shadow: 0px 4px 8px black;
 }
 
 .message {
