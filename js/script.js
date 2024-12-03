@@ -7,6 +7,7 @@ const months = ["January","February","March","April","May","June","July","August
 
 // Start current date
 let currentDate = new Date();
+let messages = JSON.parse(localStorage.getItem("calendarMessages")) || {};
 
 // Get number of days in the month
 function getDaysInMonth(year, month) {
@@ -41,10 +42,43 @@ function updateCalendar() {
     const dayBox = document.createElement("div");
     dayBox.classList.add("box");
     dayBox.textContent = day;
+    
+    const key = `${year}-${month + 1}-${day}`;
+    if (messages[key]) {
+      const message = document.createElement("div");
+      message.textContent = messages[key];
+      message.classList.add("message");
+      dayBox.appendChild(message);
+    }
+
+    // Add hover effect
+    dayBox.addEventListener("mouseenter", () => {
+      dayBox.classList.add("hovered");
+    });
+    dayBox.addEventListener("mouseleave", () => {
+      dayBox.classList.remove("hovered");
+    });
+
+    dayBox.addEventListener("click", () => {
+      // prompt to leave your message
+      const userInput = prompt("Enter your message:", messages[key] || ""); 
+      // if user click no in prompt it will cancel
+      if (userInput !== null) {
+        // check is user entered empty string
+        if (userInput.trim() === "") {
+          delete messages[key];
+        } else {
+          messages[key] = userInput.trim();
+        }
+        // save to local storage
+        localStorage.setItem("calendarMessages", JSON.stringify(messages));
+        updateCalendar();
+      }
+    });
+
     container.appendChild(dayBox);
   }
 }
-  
 // Lets us go to previous month with click
 previousButton.addEventListener("click", () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
