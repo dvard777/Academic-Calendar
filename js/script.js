@@ -64,7 +64,7 @@ function updateCalendar() {
       const userInput = prompt("Enter your message:", messages[key] || ""); 
       // if user click no in prompt it will cancel
       if (userInput !== null) {
-        // check is user entered empty string
+        // check if user entered empty string
         if (userInput.trim() === "") {
           delete messages[key];
         } else {
